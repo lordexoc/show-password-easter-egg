@@ -3,6 +3,9 @@
 ## Overview
 This project is a simple HTML login page featuring an interactive element from the popular TV series Futurama. Specifically, it incorporates an animated depiction of Bender, the robot character known for his unique personality.
 
+## Preview
+![](https://raw.githubusercontent.com/lordexoc/show-password-easter-egg/main/benderpass.gif)
+
 ## Features
 - **Interactive Eyes:** Click the "Show Password" button to toggle password visibility. When the password is shown, Bender's eyes pop out as a representation of the "revealed" state. Conversely, when the password is hidden, Bender's eyes are placed back, symbolizing the "hidden" state.
 - **Responsive Design:** The login page is designed to be responsive and functional across different devices and screen sizes.
