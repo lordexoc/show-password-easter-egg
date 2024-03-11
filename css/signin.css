@@ -1,0 +1,247 @@
+@media (max-width: 767px) {
+    .orange-circle {
+        width: 40vw !important;
+        height: 40vw !important;
+        top: -10% !important;
+        right: -10% !important;
+    }
+
+    .green-circle {
+        width: 40vw !important;
+        height: 40vw !important;
+        bottom: -10% !important;
+        left: -10% !important;
+    }
+    .welcome span {
+        font-size: 30px !important;
+    }
+}
+
+@media (min-width: 767.02px) and (max-width: 1400px) {
+    .orange-circle {
+        width: 40vw !important;
+        height: 40vw !important;
+        top: -10% !important;
+        right: -10% !important;
+    }
+
+    .green-circle {
+        width: 40vw !important;
+        height: 40vw !important;
+        bottom: -20% !important;
+        left: 0 !important;
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    min-width: 100vw;
+    min-height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.sign-in {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.blur-background {
+    background-color: white;
+    height: 100vh;
+    width: 100vw;
+    z-index: -20;
+    position: absolute;
+    overflow: hidden;
+}
+
+.orange-circle,
+.green-circle {
+    z-index: 20;
+    position: absolute;
+    filter: blur(20px);
+    animation: pulse 5s ease alternate infinite;
+}
+
+.orange-circle {
+    background: rgba(249, 197, 65, 0.87);
+    width: 58vw;
+    height: 58vw;
+    top: -50%;
+    right: -20%;
+    border-radius: 50%;
+    
+}
+
+@keyframes pulse {
+    100% {
+        translate: 2% 0;
+
+      }
+    0% {
+        translate: -2.5% 0;
+      }
+}
+
+.green-circle {
+    background: rgba(0, 138, 80, 0.41);
+    width: 50vw;
+    height: 50vw;
+    border-radius: 50%;
+    bottom: -70%;
+    left: 10%;
+}
+
+.sign-in-container {
+    padding-inline: 10rem;
+    height: 100vh;
+    width: auto;
+    background: rgba(255, 246, 223, 0.3);
+    backdrop-filter: blur(129.5px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.welcome,
+.sign-in-form,
+.media {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.welcome span {
+    color: #3d3d3d;
+    font-family: var(--lexend);
+    font-size: 36px;
+    font-weight: 400;
+    text-align: center;
+}
+
+.sign-in-form span:first-child {
+    color: #264653;
+    font-family: var(--lexend);
+    font-size: 36px;
+    font-weight: 500;
+}
+
+.sign-in-form .form-control {
+    color: #264653;
+    font-family: var(--lexend);
+    font-size: 15px;
+    font-weight: 200;
+    width: 300px;
+    height: 50px;
+    background: transparent;
+    border-radius: 6px;
+    border: 1px solid #264653;
+    margin-block: 0.5rem;
+}
+
+.sign-in-form .form-control:focus {
+    background: transparent;
+    border: 1px solid #264653;
+}
+
+.sign-in-form button {
+    width: 300px;
+    height: 50px;
+    border-radius: 6px;
+    background: #264653;
+    color: #fff;
+    text-align: center;
+    font-family: var(--lexend);
+    font-size: 18px;
+    font-weight: 500;
+    margin-top: 0.5rem;
+}
+
+.sign-in-form button:hover {
+    color: #fff;
+    background: #152c35;
+    transition: all 0.3s ease-in;
+}
+
+.sign-in-form .remember-me {
+    width: 100%;
+    margin-top: 0.5rem;
+}
+
+.form-check-input {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    border-radius: 4px;
+    background: transparent;
+    border: 1px solid rgba(42, 157, 143, 1);
+    width: 18px;
+    height: 18px;
+    margin-right: 8px;
+    position: relative;
+    cursor: pointer;
+}
+
+.form-check-input:checked {
+    background: rgba(42, 157, 143, 1);
+}
+
+.form-check-input:active {
+    background: transparent;
+}
+
+.form-check-input::before {
+    content: "\2713"; /* Unicode karakteri (check işareti) */
+    color: white; /* Tik işareti rengi */
+    font-size: 14px; /* Tik işareti boyutu */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+}
+
+.form-check-input:checked::before {
+    display: block;
+}
+
+.form-check-label {
+    color: #264653;
+    font-family: var(--lexend);
+    font-size: 15px;
+    font-weight: 300;
+    margin-left: 0.25rem;
+    margin-top: 0.25rem;
+}
+
+.media {
+    display: flex;
+    flex-direction: row !important;
+    align-items: center;
+    justify-content: center;
+    margin-block: 2rem;
+}
+
+.media .fa-linkedin {
+    margin-inline: 2rem;
+}
+
+.media i {
+    font-size: 25px;
+    color: rgba(38, 70, 83, 1);
+    cursor: pointer;
+}
+
+.media i:hover {
+    transition: all 0.3s ease-in-out;
+    color: #003a71;
+}

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/signin.css">
+    <title>Bender Login</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.2.1/axios.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" crossorigin="anonymous">
+</head>
+<body>
+    <div id="bender" style="position: absolute; left: 0; bottom: -8px; z-index: 999; right: 0; display: none">
+        <video id="benderVid" height="180" autoplay muted><source src="bendereyes.webm" type="video/webm"></video>
+    </div>
+    <div id="benderReverse" style="position: absolute; left: 0; bottom: -8px; z-index: 999; right: 0; display: none">
+        <video id="benderReVid" height="180" autoplay muted><source src="bendereyesReverse.webm" type="video/webm"></video>
+    </div>
+    <div class="sign-in">
+        <div class="blur-background">
+            <span class="orange-circle"></span>
+            <span class="green-circle"></span>
+        </div>
+        <div class="sign-in-container">
+            <div class="welcome">
+                <img src="https://www.adaptivewfs.com/wp-content/uploads/2020/07/logo-placeholder-image.png" width="130" height="130" alt="">
+                <span>Bender Login</span>
+            </div>
+            <div class="sign-in-form">
+                <span>Welcome</span>
+                <span style="font-size:16px;">Welcome back!</span>
+                <form method="POST" action="#">
+                    <input type="email" name="email2" class="form-control shadow-none" placeholder="E-mail">
+                    <div class="password-wrapper" style="position: relative;">
+                        <input type="password" name="password" class="form-control shadow-none" id="password" placeholder="Password" required>
+                        <img height="24" onclick="togglePasswordVisibility('password', this)" src="https://static.thenounproject.com/png/4334035-200.png" alt="Göster" style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); cursor: pointer;">
+                    </div>
+                    <button type="submit" class="btn">Login</button>
+                </form>
+            </div>
+            <div class="media">
+                <div><i class="fa-brands fa-facebook"></i></div>
+                <div><i class="fa-brands fa-linkedin"></i></div>
+                <div><i class="fa-brands fa-instagram"></i></div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" crossorigin="anonymous"></script>
+    <script>
+        var bender = document.getElementById('bender');
+        var benderReverse = document.getElementById('benderReverse');
+        var benderVid = document.getElementById('benderVid');
+        var benderReVid = document.getElementById('benderReVid');
+        function togglePasswordVisibility(passwordId, toggleIcon) {
+            var passwordInput = document.getElementById(passwordId);
+            if (passwordInput.type === "password") {
+                passwordInput.type = "text";
+                toggleIcon.src = "https://media.tenor.com/hP6pkHvPBFMAAAAj/eyes-closed-bender.gif";
+                bender.style.display = "block";
+                benderReverse.style.display = "none";
+                benderVid.play();
+            } else {
+                passwordInput.type = "password";
+                toggleIcon.src = "https://static.thenounproject.com/png/4334035-200.png";
+                bender.style.display = "none";
+                benderReverse.style.display = "block";
+                benderReVid.play();
+            }
+        }
+    </script>
+</body>
+</html>
