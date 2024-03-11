@@ -1,4 +1,4 @@
-# Bender HTML Login Page
+# Show Password Easter Egg (Bender Edition)
 
 ## Overview
 This project is a simple HTML login page featuring an interactive element from the popular TV series Futurama. Specifically, it incorporates an animated depiction of Bender, the robot character known for his unique personality.
